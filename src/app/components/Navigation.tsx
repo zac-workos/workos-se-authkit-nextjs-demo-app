@@ -49,6 +49,9 @@ export async function Navigation() {
           <Button asChild variant="soft">
             <NextLink href="/logs">Logs</NextLink>
           </Button>
+          <Button asChild variant="soft">
+            <NextLink href="/directory-sync">Directory Sync</NextLink>
+          </Button>
           <OrganizationSwitcherWidget authToken={authToken} />
         </>
       )}

@@ -51,7 +51,7 @@ export function CreateOrganization() {
       window.location.reload();
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An unknown error occurred"
+        err instanceof Error ? err.message : "An unknown error occurred",
       );
     } finally {
       setIsLoading(false);
@@ -60,46 +60,54 @@ export function CreateOrganization() {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)} variant="soft" size="2">
+      <Button onClick={() => setOpen(true)} variant="soft" color="gray" size="2">
         <PlusIcon />
         Create Organization
       </Button>
 
       <Dialog.Root open={open} onOpenChange={setOpen}>
         <Dialog.Content>
-          <Dialog.Title>Create New Organization</Dialog.Title>
-          <Dialog.Description size="2" mb="4">
-            Create a new organization in your WorkOS account.
-          </Dialog.Description>
+          <Flex direction="column" gap="4">
+            {/* Header */}
+            <Flex direction="column" gap="1">
+              <Dialog.Title>Create New Organization</Dialog.Title>
+              <Dialog.Description size="2">
+                Create a new organization in your WorkOS account.
+              </Dialog.Description>
+            </Flex>
 
-          <Flex direction="column" gap="3">
-            <label>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Organization Name
-              </Text>
-              <TextField.Root
-                placeholder="Enter organization name"
-                value={orgName}
-                onChange={(e) => setOrgName(e.target.value)}
-              />
-            </label>
+            {/* Body */}
+            <Flex direction="column" gap="3">
+              <label>
+                <Text as="div" size="2" mb="1" weight="bold" color="gray">
+                  Organization Name
+                </Text>
+                <TextField.Root
+                  variant="surface"
+                  placeholder="Enter organization name"
+                  value={orgName}
+                  onChange={(e) => setOrgName(e.target.value)}
+                />
+              </label>
 
-            {error && (
-              <Text color="red" size="2">
-                {error}
-              </Text>
-            )}
-          </Flex>
+              {error && (
+                <Text color="red" size="2">
+                  {error}
+                </Text>
+              )}
+            </Flex>
 
-          <Flex gap="3" mt="4" justify="end">
-            <Dialog.Close>
-              <Button variant="soft" color="gray">
-                Cancel
+            {/* Footer */}
+            <Flex gap="3" justify="end">
+              <Dialog.Close>
+                <Button variant="soft" color="gray">
+                  Cancel
+                </Button>
+              </Dialog.Close>
+              <Button variant="solid" onClick={handleCreateOrganization} disabled={isLoading}>
+                {isLoading ? "Creating..." : "Create Organization"}
               </Button>
-            </Dialog.Close>
-            <Button onClick={handleCreateOrganization} disabled={isLoading}>
-              {isLoading ? "Creating..." : "Create Organization"}
-            </Button>
+            </Flex>
           </Flex>
         </Dialog.Content>
       </Dialog.Root>

@@ -374,7 +374,8 @@ export function TeamUserSessions({
                       <Flex gap="2" align="center">
                         <IconButton
                           size="1"
-                          variant="soft"
+                          variant="ghost"
+                          color="gray"
                           onClick={() => toggleUserSessions(user.userId)}
                           disabled={user.sessionsLoading}
                           title={
@@ -398,7 +399,7 @@ export function TeamUserSessions({
                           <IconButton
                             size="1"
                             color="red"
-                            variant="soft"
+                            variant="ghost"
                             onClick={() => revokeAllUserSessions(user.userId)}
                             disabled={revokingUserId === user.userId}
                             title="Revoke all sessions"
@@ -537,7 +538,8 @@ function TruncatedId({ id, max = 8 }: { id: string; max?: number }) {
       </Code>
       <IconButton
         size="1"
-        variant="soft"
+        variant="ghost"
+        color="gray"
         title="Copy ID"
         aria-label="Copy ID"
         onClick={copy}

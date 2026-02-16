@@ -135,7 +135,7 @@ export default async function SettingsPage({
             position: "relative",
           }}
         >
-          <Heading size="5" mb="4">
+          <Heading size="5" mb="4" color="gray" highContrast>
             Settings
           </Heading>
 
@@ -250,11 +250,12 @@ export default async function SettingsPage({
               </Tabs.List>
 
               <Flex
+                key={organizationId}
                 direction="column"
                 style={{
                   width: "calc(100% - 240px)",
                   padding: "20px",
-                  backgroundColor: "white",
+                  backgroundColor: "var(--gray-1)",
                   height: "100%",
                   overflow: "auto",
                 }}
@@ -353,7 +354,7 @@ export default async function SettingsPage({
         </Flex>
       ) : (
         <Flex direction="column" gap="2" mb="4">
-          <Heading size="8" align="center">
+          <Heading size="8" align="center" color="gray" highContrast>
             User Settings
           </Heading>
           <Text size="5" align="left" color="gray">
@@ -391,7 +392,7 @@ function TabLink({
         backgroundColor: active ? "var(--accent-3)" : "transparent",
         color: active ? "var(--accent-11)" : "inherit",
         textDecoration: "none",
-        cursor: "pointer",
+        cursor: "var(--cursor-button, pointer)",
       }}
     >
       <Flex gap="2" align="center">
@@ -410,9 +411,9 @@ function ContentSection({
 }) {
   return (
     <Flex direction="column" gap="4">
-      <Text size="5" weight="bold">
+      <Heading size="4" color="gray" highContrast>
         {title}
-      </Text>
+      </Heading>
       {children}
     </Flex>
   );

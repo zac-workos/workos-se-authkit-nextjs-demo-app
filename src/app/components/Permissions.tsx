@@ -15,9 +15,9 @@ export default async function Permissions({ role }: PermissionsProps) {
   return (
     <Flex direction="column" gap="4">
       {/* User Info Card */}
-      <Card size="2">
+      <Card size="2" variant="surface">
         <Flex direction="column" gap="2">
-          <Heading size="4">User Information</Heading>
+          <Heading size="3" color="gray" highContrast>User Information</Heading>
           <Flex direction="column" gap="2">
             <Flex gap="2" align="center">
               <Text weight="medium" size="2">
@@ -40,9 +40,9 @@ export default async function Permissions({ role }: PermissionsProps) {
       </Card>
 
       {/* Role Information Card */}
-      <Card size="2">
+      <Card size="2" variant="surface">
         <Flex direction="column" gap="3">
-          <Heading size="4">Role Information</Heading>
+          <Heading size="3" color="gray" highContrast>Role Information</Heading>
           <Flex direction="column" gap="3">
             <Flex gap="2" align="center">
               <PersonIcon width="16" height="16" />
@@ -58,13 +58,13 @@ export default async function Permissions({ role }: PermissionsProps) {
       </Card>
 
       {/* Permissions Card */}
-      <Card size="2">
+      <Card size="2" variant="surface">
         <Flex direction="column" gap="3">
-          <Heading size="4">Permissions</Heading>
+          <Heading size="3" color="gray" highContrast>Permissions</Heading>
           <Flex direction="column" gap="2">
             {permissions?.map((permission, index) => (
               <Flex key={index} gap="2" align="center">
-                <CheckCircledIcon color="green" width="16" height="16" />
+                <CheckCircledIcon style={{ color: "var(--green-9)" }} width="16" height="16" />
                 <Text size="2" color="gray">
                   {permission.trim()}
                 </Text>

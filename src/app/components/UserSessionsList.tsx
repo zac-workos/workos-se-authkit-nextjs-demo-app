@@ -97,7 +97,7 @@ export function UserSessionsList() {
         justify="center"
         style={{ minHeight: "100px" }}
       >
-        <Spinner size="2" />
+        <Spinner size="2" color="gray" />
       </Flex>
     );
   }
@@ -164,7 +164,7 @@ export function UserSessionsList() {
           </Text>
           <Flex direction="column" gap="3">
             {sessionsData.sessions.map((session) => (
-              <Card key={session.id} style={{ padding: "16px" }}>
+              <Card key={session.id} variant="surface" style={{ padding: "16px" }}>
                 <Flex direction="column" gap="3">
                   <Flex justify="between" align="center">
                     <Flex align="center" gap="2">

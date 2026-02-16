@@ -113,10 +113,10 @@ export default function PortalButton({
   const content = getContent();
 
   return (
-    <Card size="2" asChild variant="classic">
+    <Card size="2" asChild variant="surface">
       <a
         onClick={handlePortalClick}
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "var(--cursor-button, pointer)" }}
         role="button"
       >
         {isLoading ? (
@@ -127,11 +127,11 @@ export default function PortalButton({
               padding: "1rem",
             }}
           >
-            <Spinner size="2" />
+            <Spinner size="2" color="gray" />
           </div>
         ) : (
           <>
-            <Heading size="4" mb="1">
+            <Heading size="4" mb="1" color="gray" highContrast>
               {content.heading}
             </Heading>
             <Text color="gray">{content.text}</Text>

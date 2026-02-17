@@ -28,11 +28,11 @@ export function Footer() {
         </a>
       </Card>
       <Card size="4" asChild variant="surface">
-        <a href="https://www.grammarly.com" rel="noreferrer" target="_blank">
+        <a href="https://www.docebo.com" rel="noreferrer" target="_blank">
           <Heading size="4" mb="1" color="gray" highContrast>
-            Grammarly
+            Docebo
           </Heading>
-          <Text color="gray">AI writing assistance for individuals and teams. Write with confidence everywhere.</Text>
+          <Text color="gray">The AI-powered learning platform for enterprise workforce readiness.</Text>
         </a>
       </Card>
     </Grid>

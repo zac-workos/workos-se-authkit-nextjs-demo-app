@@ -4,10 +4,11 @@
  */
 
 :root {
-  /* Grammarly brand colors */
-  --workos-purple: #15c39a;
-  --grammarly-green: #15c39a;
-  --grammarly-dark: #0e101a;
+  /* Docebo brand colors */
+  --workos-purple: #7e2ee9;
+  --docebo-purple: #7e2ee9;
+  --docebo-blue: #002b80;
+  --docebo-blue-bright: #0057ff;
 
   /* Letter spacing scale */
   --letter-spacing-1: 0.005em;

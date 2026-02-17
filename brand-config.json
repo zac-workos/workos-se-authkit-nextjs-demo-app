@@ -1,33 +1,33 @@
 {
   "company": {
-    "name": "Grammarly",
-    "tagline": "AI writing assistance for everyone",
-    "description": "Grammarly is the world's leading AI writing assistance company, helping people and teams communicate more effectively. Powered by WorkOS AuthKit."
+    "name": "Docebo",
+    "tagline": "Real-world skills meet world-class learning",
+    "description": "Docebo is the AI-powered learning platform that brings together skills, learning, and outcomes — so your people can do their best work. Powered by WorkOS AuthKit."
   },
   "hero": {
-    "heading": "Secure access for your writing platform",
-    "subheading": "Enterprise-grade authentication for Grammarly. Single sign-on, directory sync, and multi-factor authentication — all powered by WorkOS.",
+    "heading": "Secure access for your learning platform",
+    "subheading": "Enterprise-grade authentication for Docebo. Single sign-on, directory sync, and multi-factor authentication — all powered by WorkOS.",
     "ctaText": "Sign In"
   },
   "features": [
     {
       "title": "Single Sign-On",
-      "description": "Connect your identity provider for seamless access to Grammarly across your organization.",
+      "description": "Connect your identity provider for seamless access to Docebo across your organization.",
       "icon": "LockClosedIcon"
     },
     {
       "title": "Directory Sync",
-      "description": "Automatically provision and deprovision team members from your HR system.",
+      "description": "Automatically provision and deprovision learners and admins from your HR system.",
       "icon": "PersonIcon"
     },
     {
       "title": "Multi-Factor Auth",
-      "description": "Protect your team's writing data with an additional layer of verification.",
+      "description": "Protect your organization's learning data with an additional layer of verification.",
       "icon": "LockOpen1Icon"
     },
     {
       "title": "Audit Logs",
-      "description": "Track every authentication event across your Grammarly workspace.",
+      "description": "Track every authentication event across your Docebo learning environment.",
       "icon": "ActivityLogIcon"
     }
   ],
@@ -37,15 +37,15 @@
       { "value": "SOC 2", "label": "Type II Certified" },
       { "value": "99.99%", "label": "Uptime SLA" },
       { "value": "GDPR", "label": "Compliant" },
-      { "value": "70K+", "label": "Teams Trust Grammarly" }
+      { "value": "3,800+", "label": "Companies Trust Docebo" }
     ]
   },
   "dashboard": {
     "welcomeHeading": "Welcome back, {{firstName}}",
-    "welcomeSubheading": "Manage your {{companyName}} workspace",
+    "welcomeSubheading": "Manage your {{companyName}} learning platform",
     "statusItems": [
       { "label": "Authentication", "icon": "LockClosedIcon", "value": "Active" },
-      { "label": "Team Members", "icon": "PersonIcon", "value": "Synced" },
+      { "label": "Learners", "icon": "PersonIcon", "value": "Synced" },
       { "label": "Integrations", "icon": "Link1Icon", "value": "Connected" }
     ]
   },
@@ -58,7 +58,7 @@
     },
     {
       "title": "Integrations",
-      "description": "Connect your writing tools and manage workflows.",
+      "description": "Connect your learning tools and manage workflows.",
       "href": "/integrations",
       "icon": "Link1Icon"
     },

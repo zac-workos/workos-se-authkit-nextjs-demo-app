@@ -1,10 +1,12 @@
 // Import the base CSS styles for the radix-ui components.
 import "@radix-ui/themes/styles.css";
+// WorkOS design system token overrides (must come after Radix styles)
+import "./styles/workos-overrides.css";
 
 import type { Metadata } from "next";
 import { Theme, Card, Container, Flex, Box } from "@radix-ui/themes";
 import { Footer } from "./components/Footer";
-import { SignInButton } from "./components/SignInButton";
+import { HeaderActions } from "./components/HeaderActions";
 import {
   AuthKitProvider,
   Impersonation,
@@ -12,12 +14,14 @@ import {
 import { Navigation } from "./components/Navigation";
 import GlobalLoading from "./components/global-loading";
 import Script from "next/script";
+import { getBrandConfig } from "./lib/brand-config";
 
 const ACCENT_COLOR = process.env.ACCENT_COLOR;
+const brandConfig = getBrandConfig();
 
 export const metadata: Metadata = {
-  title: "Example AuthKit Authenticated App",
-  description: "Example Next.js application demonstrating how to use AuthKit.",
+  title: `${brandConfig.company.name} - Identity & Access Management`,
+  description: brandConfig.company.description,
 };
 
 export default function RootLayout({
@@ -54,7 +58,8 @@ export default function RootLayout({
         <GlobalLoading />
         <Theme
           accentColor={ACCENT_COLOR as any}
-          panelBackground="solid"
+          grayColor="slate"
+          radius="medium"
           style={{ backgroundColor: "var(--gray-1)" }}
         >
           <AuthKitProvider>
@@ -68,10 +73,10 @@ export default function RootLayout({
                 <Box asChild flexGrow="1">
                   <Card style={{ width: "100%", maxWidth: "100%" }}>
                     <Flex direction="column" height="100%">
-                      <Flex asChild justify="between">
+                      <Flex asChild justify="between" align="center">
                         <header>
                           <Navigation />
-                          <SignInButton />
+                          <HeaderActions />
                         </header>
                       </Flex>
                       <Flex flexGrow="1" align="center" justify="center">

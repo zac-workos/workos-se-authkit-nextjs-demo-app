@@ -1,0 +1,67 @@
+/* WorkOS Design System Token Overrides
+ * Replicates key customizations from the internal WorkOS design system (theme.css)
+ * layered on top of @radix-ui/themes defaults.
+ */
+
+:root {
+  /* Grammarly brand colors */
+  --workos-purple: #15c39a;
+  --grammarly-green: #15c39a;
+  --grammarly-dark: #0e101a;
+
+  /* Letter spacing scale */
+  --letter-spacing-1: 0.005em;
+  --letter-spacing-2: 0em;
+  --letter-spacing-3: 0em;
+  --letter-spacing-4: -0.005em;
+  --letter-spacing-5: -0.01em;
+  --letter-spacing-6: -0.0125em;
+  --letter-spacing-7: -0.015em;
+  --letter-spacing-8: -0.02em;
+  --letter-spacing-9: -0.05em;
+
+  /* Font weight */
+  --font-weight-medium: 700;
+
+  /* Leading trim */
+  --default-leading-trim-start: 0.42em;
+  --default-leading-trim-end: 0.38em;
+
+  /* Additional spacing token */
+  --space-4-5: 20px;
+
+  /* Cursor tokens */
+  --cursor-button: pointer;
+  --cursor-disabled: default;
+  --cursor-link: pointer;
+  --cursor-menu-item: pointer;
+  --cursor-slider-thumb: pointer;
+  --cursor-slider-thumb-active: pointer;
+  --cursor-switch: pointer;
+
+  /* Light mode text color override for slate */
+  --slate-12: hsl(210, 16%, 20%);
+}
+
+.dark,
+.dark-theme {
+  /* Dark mode text color override */
+  --slate-12: hsl(220, 7%, 93.5%);
+}
+
+/* Select and DropdownMenu: use gray hover instead of accent */
+.rt-SelectItem:where([data-highlighted]) {
+  background-color: var(--gray-a3);
+}
+
+/* Disabled tabs */
+[role="tab"]:disabled,
+[role="tab"][data-disabled] {
+  pointer-events: none;
+  color: var(--gray-a8);
+}
+
+/* Dialog backdrop - disable expensive backdrop-filter */
+.rt-DialogOverlay {
+  --backdrop-filter-panel: none;
+}

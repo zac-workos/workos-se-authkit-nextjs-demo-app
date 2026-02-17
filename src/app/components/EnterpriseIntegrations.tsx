@@ -9,8 +9,8 @@ export function EnterpriseIntegrations({
   organizationId,
 }: EnterpriseIntegrationsProps) {
   return (
-    <Flex direction="column" gap="1" mb="0" pt="1">
-      <Grid rows={{ initial: "1", sm: "1" }} gap={{ initial: "1", sm: "1" }}>
+    <Flex direction="column" gap="3" pt="1">
+      <Grid rows={{ initial: "1", sm: "1" }} gap={{ initial: "3", sm: "3" }}>
         <PortalButton organizationId={organizationId} intent="sso" />
         <PortalButton organizationId={organizationId} intent="dsync" />
         <PortalButton organizationId={organizationId} intent="audit_logs" />

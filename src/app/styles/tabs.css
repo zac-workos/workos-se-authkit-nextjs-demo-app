@@ -1,10 +1,12 @@
 /* Style for active tab triggers only */
 [data-orientation="vertical"][role="tab"][data-state="active"] {
-  background-color: var(--gray-4) !important;
+  background-color: var(--accent-3) !important;
   border-left: 3px solid var(--accent-9) !important;
+  color: var(--accent-11) !important;
   text-decoration: none !important;
   box-shadow: none !important;
   font-weight: 500 !important;
+  cursor: var(--cursor-button, pointer) !important;
 }
 
 /* Remove underline from all vertical tab triggers */
@@ -12,9 +14,28 @@
   display: none !important;
 }
 
-/* Hover effect for tabs */
+/* Base tab trigger styling */
+[data-orientation="vertical"][role="tab"] {
+  cursor: var(--cursor-button, pointer) !important;
+  width: 100% !important;
+  max-width: 240px !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Hover effect for tabs - use gray for non-active */
 [data-orientation="vertical"][role="tab"]:hover:not([data-state="active"]) {
-  background-color: var(--gray-3) !important;
+  background-color: var(--gray-a3) !important;
+}
+
+/* Disabled tabs */
+[data-orientation="vertical"][role="tab"]:disabled,
+[data-orientation="vertical"][role="tab"][data-disabled] {
+  pointer-events: none !important;
+  color: var(--gray-a8) !important;
+  cursor: var(--cursor-disabled, default) !important;
 }
 
 /* Make tabs fill the height and prevent scrolling */
@@ -24,16 +45,6 @@
   position: relative !important;
   width: 240px !important;
   flex-shrink: 0 !important;
-}
-
-/* Ensure tab content is properly contained */
-[data-orientation="vertical"][role="tab"] {
-  width: 100% !important;
-  max-width: 240px !important;
-  box-sizing: border-box !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
 }
 
 /* Make tabs more compact on smaller screens */

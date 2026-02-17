@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Flex, Spinner } from "@radix-ui/themes";
+import { Flex, Spinner, Text } from "@radix-ui/themes";
 
 export default function GlobalLoading() {
   const [isLoading, setIsLoading] = useState(true); // Start with loading true
@@ -47,7 +47,7 @@ export default function GlobalLoading() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "white", // Use solid white to prevent any content from showing
+        backgroundColor: "var(--gray-1)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -55,8 +55,8 @@ export default function GlobalLoading() {
       }}
     >
       <Flex direction="column" align="center" gap="2">
-        <Spinner size="2" />
-        <div>Loading...</div>
+        <Spinner size="2" color="gray" />
+        <Text size="2" color="gray">Loading...</Text>
       </Flex>
     </div>
   );

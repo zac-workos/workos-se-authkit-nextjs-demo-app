@@ -85,7 +85,7 @@ export function GoogleAgenda({
         }}
         ref={calendarsRef}
       >
-        <Text size="3" weight="bold">
+        <Text size="3" weight="bold" color="gray" highContrast>
           Calendars
         </Text>
         <Flex direction="column" gap="2">
@@ -141,10 +141,10 @@ export function GoogleAgenda({
         }}
         ref={agendaRef}
       >
-        <Text size="3" weight="bold">
+        <Text size="3" weight="bold" color="gray" highContrast>
           Agenda (Next 7 Days)
         </Text>
-        <Flex direction="column" gap="3" style={{ backgroundColor: "white" }}>
+        <Flex direction="column" gap="3">
           {dayKeys.length === 0 && (
             <Text size="2" color="gray">
               No events for the selected calendars.
@@ -188,7 +188,7 @@ export function GoogleAgenda({
                           border: "1px solid var(--gray-5)",
                           borderRadius: "var(--radius-3)",
                           padding: 12,
-                          backgroundColor: "white",
+                          backgroundColor: "var(--gray-1)",
                         }}
                       >
                         <span
